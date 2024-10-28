@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #007b8a;
+        }
+        .login-container .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .login-container .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .login-container .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container .input-group input:focus {
+            border-color: #007b8a;
+            outline: none;
+        }
+        .login-container .btn {
+            background-color: #007b8a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-container .btn:hover {
+            background-color: #005f6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="code">Code</label>
+                <input type="text" id="code" name="code" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button  type="submit" class="btn">Login</button>
+        </form>
+    </div>
+</body>
+</html>

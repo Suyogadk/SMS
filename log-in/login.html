@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log-in STDS-MGT-SYSTEM</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">STDS-MGT-SYSTEM</div>
+        <div class="menu">
+            <a href="../index.html">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="../signup/signup.html">Sign-up</a>
+            <a href="login.html">log-in</a>
+            <a href="../admin/adpg.html">Admin-Pannel</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="full">
+        <h2>welcome again</h2>
+        <form action="login.php" method="POST" id="signupForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@gmail\.com$" title="must contain @gmail.com" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <!-- showpass -->
+            <div class="show-password">
+                <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">
+                <label for="show-password">Show Password</label>
+            </div>
+
+            <button type="submit">Sign-up</button>
+        </form>
+        <div class="forgot-password">
+            <a href="../password-verification/pass.html">Forgot Password?</a>
+        </div>
+        <div class="signup">
+            <a href="../signup/signup.html">don't have account?</a>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            const password = document.getElementById('password');
+            if (password.type === 'password') {
+                password.type = 'text';
+            } else {
+                password.type = 'password';
+            }
+        }
+
+        let attemptCount = 0;
+        const maxAttempts = 5;
+
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar .menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            attemptCount++;
+            if (attemptCount > maxAttempts) {
+                alert('Maximum attempts exceeded. Please try again later.');
+                event.preventDefault();
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

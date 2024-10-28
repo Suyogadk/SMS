@@ -1,0 +1,91 @@
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b; /* Dark teal */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #004d40; /* Darker teal */
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00796b; /* Dark teal border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: 100px; /* Set a default height */
+}
+
+.date-picker {
+    position: relative;
+}
+
+.date-picker input[type="date"] {
+    padding: 10px;
+    border: 1px solid #00796b; /* Dark teal border */
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f1f8e9; /* Light green background */
+    transition: background-color 0.3s ease;
+}
+
+.date-picker input[type="date"]:focus {
+    background-color: #e8f5e9; /* Slightly darker green on focus */
+    outline: none; /* Remove outline */
+}
+
+.date-picker::after {
+    content: '📅'; /* Calendar icon */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent clicks on the icon */
+    font-size: 20px; /* Adjust icon size */
+}
+
+.submit-btn {
+    background-color: #00796b; /* Dark teal */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+</style>

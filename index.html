@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STDS-MGT-SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">STDS-MGT-SYSTEM</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="./about/about.html">About</a>
+            <a href="./signup/signup.html">Sign-up</a>
+            <a href="./log-in/login.html">log-in</a>
+            <a href="admin/adpg.html">Admin-Pannel</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="intro">
+        <h1>Welcome to STDS-MGT-SYSTEM</h1>
+        <p>
+            Our Student Management System is designed to streamline the administrative tasks of schools. 
+            It helps in managing student data, tracking academic progress, and facilitating communication 
+            between teachers, students, and parents. Our system ensures that all student information is 
+            organized and easily accessible, making the management process more efficient and effective.
+        </p>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar .menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

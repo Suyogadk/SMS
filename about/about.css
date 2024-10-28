@@ -1,0 +1,90 @@
+body {
+    scrollbar-width: thick;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    padding: 10px;
+    border-bottom: 2px solid purple;
+}
+.navbar .title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.navbar .menu a:hover {
+    color: #ffcc00;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+@media (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+    .navbar .menu a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+    }
+    .navbar .menu a:first-child {
+        border-top: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+.content {
+    padding: 20px;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    text-align: center;
+}
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.developer-info {
+    margin-top: 20px;
+    text-align: left;
+}
+.developer-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.developer-info p {
+    font-size: 18px;
+    margin: 5px 0;
+}

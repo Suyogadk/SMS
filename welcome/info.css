@@ -1,0 +1,25 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b; 
+}
+
+.info {
+    margin-bottom: 15px;
+    color: #004d40; /* Darker teal */
+}
